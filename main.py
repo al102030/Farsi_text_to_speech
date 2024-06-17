@@ -16,6 +16,10 @@ with open("text.txt", "r", encoding="utf-8") as my_file:
 if txt:
     completion = client.chat.completions.create(
         # Here you can choose your desire model
+        # Other models: "gpt-4o", "gpt-4o-2025-05-13", "gpt-4", "gpt-4-turbo", "gpt-4-turbo-preview",
+        # "gpt-4-turbo-2024-04-09", "gpt-4-1106-vision-preview", "gpt-4-1106-preview", "gpt-4-0125-preview", "gpt-4-0613",
+        # "gpt-3.5-turbo-16k", "gpt-3.5-turbo-16k-0613", "gpt-3.5-turbo-0125", "gpt-3.5-turbo-1106", "gpt-3.5-turbo-0613",
+        # "gpt-3.5-turbo-0301", "gpt-3.5-turbo-0125", "gpt-3.5-turbo",
         model="gpt-3.5-turbo-0125",
         messages=[
             # This is the message that define the kind of abstraction
@@ -37,6 +41,7 @@ if txt:
         # This is the Text-to-speech API model
         model="tts-1",
         # this is the kind of Artificial voice
+        # Other voices: "alloy", "Echo", "Fable", "Onyx", "Nova", "Shimmer"
         voice="shimmer",
         input=abstracted_txt
     )
